@@ -8,7 +8,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import blockContent from "./blockContent";
 import category from "./category";
 import restaurant from "./restaurant";
-import author from "./author";
+import author from "./dish";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
