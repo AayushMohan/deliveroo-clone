@@ -14,7 +14,7 @@ import {
   SearchIcon,
   AdjustmentsIcon,
 } from "react-native-heroicons/outline";
-import Categories from "../components/categories";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
