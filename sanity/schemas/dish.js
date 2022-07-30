@@ -18,7 +18,7 @@ export default {
     {
       name: "price",
       type: "number",
-      title: "Price of Dish in GBP",
+      title: "Price of Dish in INR",
     },
     {
       name: "image",
