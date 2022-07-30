@@ -36,6 +36,12 @@ const HomeScreen = () => {
 
           <UserIcon size={35} color="#00CCBB" />
         </View>
+
+        {/* Search */}
+        <View>
+          <View></View>
+          <AdjustmentsIcon color="#00CCBB" />
+        </View>
       </Text>
     </SafeAreaView>
   );
