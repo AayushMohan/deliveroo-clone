@@ -1,6 +1,12 @@
 import { View, Text, SafeAreaView, Image } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import {
+  UserIcon,
+  ChevronDownIcon,
+  SearchIcon,
+  AdjustmentsIcon,
+} from "react-native-heroicons/outline";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -22,7 +28,10 @@ const HomeScreen = () => {
           />
           <View>
             <Text className="font-bold text-gray-400 text-xs">Deliver Now</Text>
-            <Text className="font-bold text-xl">Current Location</Text>
+            <Text className="font-bold text-xl">
+              Current Location
+              <ChevronDownIcon size={20} color="#00CCBB" />
+            </Text>
           </View>
         </View>
       </Text>
