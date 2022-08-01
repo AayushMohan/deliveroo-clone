@@ -1,5 +1,5 @@
 import { View, Text, ScrollView } from "react-native";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./RestaurantCard";
 import sanityClient from "../sanity";
@@ -41,63 +41,23 @@ const FeaturedRow = ({ id, title, description }) => {
         showsHorizontalScrollIndicator={false}
         className="pt-4"
       >
+        {restaurants?.map((restaurant) => (
+          <RestaurantCard
+            key={restaurant._id}
+            id={restaurant._id}
+            imgUrl={restaurant.image}
+            address={restaurant.address}
+            title={restaurant.title}
+            dishes={restaurant.dishes}
+            rating={restaurant.rating}
+            short_description={restaurant.short_description}
+            genre={restaurant.genre}
+            long={restaurant.long}
+            lat={restaurant.lat}
+          />
+        ))}
+
         {/* RestaurantCards... */}
-        <RestaurantCard
-          id="1"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Sushi "
-          description="Testing 1"
-          price="$10"
-          rating={4.5}
-          genre="Japanese"
-          address="123 Main St"
-          short_description="This is Test a description"
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="1"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Sushi "
-          description="Testing 1"
-          price="$10"
-          rating={4.5}
-          genre="Japanese"
-          address="123 Main St"
-          short_description="This is Test a description"
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="1"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Sushi "
-          description="Testing 1"
-          price="$10"
-          rating={4.5}
-          genre="Japanese"
-          address="123 Main St"
-          short_description="This is Test a description"
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
-        <RestaurantCard
-          id="1"
-          imgUrl="https://links.papareact.com/gn7"
-          title="Yo Sushi "
-          description="Testing 1"
-          price="$10"
-          rating={4.5}
-          genre="Japanese"
-          address="123 Main St"
-          short_description="This is Test a description"
-          dishes={[]}
-          long={20}
-          lat={0}
-        />
       </ScrollView>
     </View>
   );
