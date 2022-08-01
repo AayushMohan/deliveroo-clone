@@ -1,8 +1,11 @@
 import { Text, ScrollView } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
 
 const Categories = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {}, []);
   return (
     <ScrollView
       contentContainerStyle={{ paddingHorizontal: 15, paddingTop: 10 }}
