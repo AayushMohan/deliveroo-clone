@@ -42,6 +42,12 @@ const RestaurantScreen = () => {
           <ArrowLeftIcon size={20} color="#00CCBB" />
         </TouchableOpacity>
       </View>
+      <View className="bg-white">
+        <View className="px-4 pt-4">
+          <Text className="text-3xl font-bold">{title}</Text>
+          <View className="flex-row space-x-2 my-1"></View>
+        </View>
+      </View>
     </ScrollView>
   );
 };
