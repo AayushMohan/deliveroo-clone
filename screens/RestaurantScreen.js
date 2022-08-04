@@ -60,12 +60,15 @@ const RestaurantScreen = () => {
             </View>
 
             <View className="flex-row items-center space-x-1">
-              <LocationMarkerIcon color="green" opacity={0.4} size={22} />
+              <LocationMarkerIcon color="gray" opacity={0.4} size={22} />
               <Text className="text-xs text-gray-500">
-                <Text className="text-green-500">{rating}</Text> . {genre}
+                <Text className="text-gray-500">Nearby • {address}</Text>
               </Text>
             </View>
           </View>
+          <Text className="text-xs text-gray-500 mt-2 pb-4">
+            {short_description}
+          </Text>
         </View>
       </View>
     </ScrollView>
